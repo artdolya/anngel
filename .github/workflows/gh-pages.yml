@@ -22,8 +22,8 @@ jobs:
       - name: Publish Blazor App
         run: dotnet publish -c Release -o release --nologo
       
-      - name: rename base-tag to work with GitHub Pages
-        run: sed -i 's/<base href="\/" \/>/<base href="\/anngel\/" \/>/g' release/wwwroot/index.html
+      # - name: rename base-tag to work with GitHub Pages
+      #   run: sed -i 's/<base href="\/" \/>/<base href="\/anngel\/" \/>/g' release/wwwroot/index.html
       
       - name: copy 404
         run: cp release/wwwroot/index.html release/wwwroot/404.html
