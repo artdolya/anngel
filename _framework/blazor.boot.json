@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "terior-design",
   "resources": {
-    "hash": "sha256-ct0QizAzLkzhgnswYIeVyT2c4+IU6WV9YiYYmS/oZjI=",
+    "hash": "sha256-ZCs8hSEGrvkp49rUB29sCaZh7ZwVXpo0R1LJR6+K+QY=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.ahpp78valh.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
     },
@@ -48,7 +48,7 @@
       "System.Text.Encodings.Web.wasm": "sha256-+xy+tOrpZQfQay41WvWhFxGHmHiYCwxIZC0u0YeG8MY=",
       "System.Text.Json.wasm": "sha256-3+CtWg+4SO1T+15o1W5mTBoxvMzlPRN8VPA3AvcZBXM=",
       "System.Text.RegularExpressions.wasm": "sha256-gBOmDgKZBuDoGsHbhJq/ngBU9uslj8K/+ZuZekYrq54=",
-      "terior-design.wasm": "sha256-ZA+aKo3eAVbSUXEwIHkwE5BG2pC1CDPrclZsmQdllaw="
+      "terior-design.wasm": "sha256-82QjxAkph534SHEHMiDl30Mpo4eLH6ZYeKW/sNXU7Yk="
     }
   },
   "cacheBootResources": true,
