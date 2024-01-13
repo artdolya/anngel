@@ -8,6 +8,8 @@ jobs:
   build-services:
     name: Build Services
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,4 +34,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # The folder the action should deploy.
+          token	: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: release/wwwroot
