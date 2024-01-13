@@ -20,7 +20,7 @@ jobs:
           dotnet-version: 8.x
 
       - name: Publish Blazor App
-        run: dotnet publish -v Release -o release --nologo
+        run: dotnet publish -c Release -o release --nologo
       
       - name: rename base-tag to work with GitHub Pages
         run: sed -i 's/<base href="\/" \/><base href="\/anngel\/" \/>/g'
