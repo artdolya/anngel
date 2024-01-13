@@ -1,0 +1,35 @@
+name: Publish To GitHub Actions
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build-services:
+    name: Build Services
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.x
+
+      - name: Publish Blazor App
+        run: dotnet publish -v Release -o release --nologo
+      
+      - name: rename base-tag to work with GitHub Pages
+        run: sed -i 's/<base href="\/" \/><base href="\/anngel\/" \/>/g'
+      
+      - name: copy 404
+        run: cp release/wwwroot/index.html release/wwwroot/404.html
+      
+      - name: Add .nojekyll
+        run: touch release/wwwroot/.nojekyll
+      
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.
