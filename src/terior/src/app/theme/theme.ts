@@ -1,17 +1,5 @@
-import { Roboto } from 'next/font/google'
 import { createTheme } from '@mui/material/styles'
-
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import { Colors } from './colors';
-
-const roboto = Roboto({
-    weight: ['300','400', '500', '700'],
-    subsets: ['latin'],
-    display: 'swap'
-})
 
 declare module '@mui/material/styles' {
     interface Components {
@@ -24,10 +12,25 @@ export const theme = createTheme({
         mode: 'dark'
     },
     typography: {
-        fontFamily: roboto.style.fontFamily
+        fontFamily: 'Roboto, sans-serif'
     },
-
+    breakpoints:{
+        values: {
+            xs: 0,
+            sm: 600,
+            md: 960,
+            lg: 1440,
+            xl: 1920,
+        },
+    },
     components: {
-
+        MuiContainer: {
+            styleOverrides: {
+                root: {
+                    maxWidth: 'lg',
+                },
+            },
+        },
     }
+
 })

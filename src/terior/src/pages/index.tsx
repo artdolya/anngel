@@ -1,20 +1,14 @@
+import Header from '@/app/component/Header'
+import Hero from '@/app/component/Hero'
 import { Box, Container, Typography } from '@mui/material'
 
 
 export default function Home() {
   return (
-    <Container sx={{
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center'
-      }}>
-      <Box>
-       <Typography>MAIN PAGE</Typography>
-      </Box>
-
+    <Container maxWidth='xl'>
+        <Header/>
+        <Hero/>
     </Container>
 
-      )
+  )
 }
