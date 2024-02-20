@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 function Hero(){
     return(
         <Container maxWidth='xl'>
-            <Box sx={{position: 'relative', width: '100%', height: '641px' }}>
+            <Box sx={{position: 'relative', width: '100%', height: '641px', mt: '15px' }}>
                 <Image
                 src="/heroImg.png"
                 alt="hero"
@@ -31,7 +31,7 @@ function Hero(){
                       backgroundColor: 'black',
                     },
                 }}>
-                Об'єкти
+                Об&apos;єкти
                 </Button>
             </Box>
         </Container>
