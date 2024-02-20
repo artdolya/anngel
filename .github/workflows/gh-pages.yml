@@ -28,11 +28,11 @@ jobs:
         run: npm run build
       
       - name: copy 404
-        working-directory: ./src/terior/.next  
+        working-directory: ./src/terior/out
         run: cp index.html 404.html
       
       - name: Add .nojekyll
-        working-directory: ./src/terior/.next
+        working-directory: ./src/terior/out
         run: touch .nojekyll
       
       - name: Deploy 🚀
@@ -40,4 +40,4 @@ jobs:
         with:
           token	: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder:  ./src/terior/.next
+          folder:  ./src/terior/out
