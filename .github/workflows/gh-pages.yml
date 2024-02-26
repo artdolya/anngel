@@ -20,19 +20,19 @@ jobs:
           node-version: '20'
 
       - name: Restore NextJs Dependencies
-        working-directory: ./src/terior
+        working-directory: ./src/teriornew
         run: npm install
 
       - name: Publish NextJs App
-        working-directory: ./src/terior
+        working-directory: ./src/teriornew
         run: npm run build
       
       - name: copy 404
-        working-directory: ./src/terior/out
+        working-directory: ./src/teriornew/out
         run: cp index.html 404.html
       
       - name: Add .nojekyll
-        working-directory: ./src/terior/out
+        working-directory: ./src/teriornew/out
         run: touch .nojekyll
       
       - name: Deploy 🚀
@@ -40,4 +40,4 @@ jobs:
         with:
           token	: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder:  ./src/terior/out
+          folder:  ./src/teriornew/out
