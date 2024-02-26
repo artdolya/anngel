@@ -5,6 +5,7 @@ import {Flex} from '@chakra-ui/react'
 import Hero from './components/Hero'
 import Subhero from './components/Subhero'
 import RoomProjects from './components/RoomProjects'
+import Process from './components/Process'
 
 export default function Page() {
 
@@ -24,6 +25,7 @@ export default function Page() {
       </Flex>
       <Subhero/>
       <RoomProjects/>
+      <Process/>
     </Layout>
   )
 }

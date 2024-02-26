@@ -43,7 +43,7 @@ const Footer = () => {
               </Link>
             ))}
           </Flex>
-          <Flex gap={4}>
+          <Flex gap={4} mb={4}>
             <FaFacebook size={'28px'} /> 
             <FaInstagram size={'28px'} />
             <FaTelegram size={'28px'} />

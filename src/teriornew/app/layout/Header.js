@@ -60,8 +60,10 @@ const Header = () => {
               display={{ base: "block", md: "none" }}
               ref={btnRef}
               onClick={onOpen}
+              mt={'4px'}
+              bg="transparent"
             >
-              <IoMdMenu />
+              <IoMdMenu size={35}/>
           </Button>
           <Drawer
             isOpen={isOpen}
