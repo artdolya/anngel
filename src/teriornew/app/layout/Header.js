@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 import SETTINGS from "../settings";
 import { Container, Flex, Text, Image, Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, useDisclosure } from "@chakra-ui/react";
@@ -10,13 +12,15 @@ const Header = () => {
   const btnRef = React.useRef();
   
   return (
-    <Flex as="header" position="fixed" h="80px" bg="white" w="full">
+    <Flex as="header" position="fixed" h="80px" bg="white" w="full" zIndex={999} boxShadow='md'>
       <Container maxW="8xl">
-        <Flex px={6} py={6} justifyContent='space-between'>
+        <Flex px={6} py={4} justifyContent='space-between'>
           <Flex>
-            <Flex h="48px">
-              <Image src='/logo.png' htmlHeight="100%" alt={siteName}/>
-            </Flex>
+            <Link href='/'>
+              <Flex h="48px">
+                  <Image src='/logo.png' htmlHeight="100%" alt={siteName}/>
+              </Flex>
+            </Link>
           </Flex>
           <Flex
             display={{ base: "none", md: "flex" }}
@@ -25,7 +29,7 @@ const Header = () => {
             alignItems="center"
             letterSpacing={1}
           >
-            <Link href='/' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
+            <Link href='/about' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
               ABOUT
             </Link>
             <Link href='/projects' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
@@ -45,10 +49,10 @@ const Header = () => {
             display={{ base: "none", md: "block" }} 
             w='383px'
             h='47px'
-            border='1px solid'
-            fontSize='xl'
-            fontWeight={700}
-            backgroundColor={'white'}
+            variant='outline'
+            colorScheme='black'
+            _hover={{ bg: 'gray.100' }}
+            textTransform={'uppercase'}
           >
             CALCULATE THE COST
           </Button>
