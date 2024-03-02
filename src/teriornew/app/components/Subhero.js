@@ -11,6 +11,7 @@ const Subhero = () => {
                     fontSize={{ base: '24px', md: '28px', lg: '32px' }}
                     fontWeight={700}
                     letterSpacing={2}
+                    textTransform={'uppercase'}
                     >
                     About Anna Dolya
                 </Text>
@@ -18,11 +19,19 @@ const Subhero = () => {
                 fontSize={{ base: '24px', md: '28px', lg: '32px' }}
                 fontWeight={300}
                 textAlign={'center'}
-                maxW={'806px'}
+                textTransform={'uppercase'}
                 >
-                    Щоб не створила твоя уява, завжди знайдеться той, хто це вже зробив до тебе.
-                    <br />
-                    Отже, головне - зробити це краще. 
+                     я ЛЮБЛЮ СВОЇХ ЗАМОВНИКІВ.
+                     <br/>
+                    лЮБЛЮ ЗА ДОВІРУ, ЯКУ ДО МЕНЕ ВИЯВЛЯЮТЬ.
+                    <br/>
+                    лЮБЛЮ ЗА РОЗГУБЛЕНЕ: “Я НЕ ЗНАЮ, ЧОГО ХОЧУ”.
+                    <br/>
+                    лЮБЛЮ ЗА ВПЕВНЕНЕ: “я ХОЧУ, ЩОБ БУЛО КРАСИВО”.
+                    <br/>
+                    лЮБЛЮ ЗА ЩАСЛИВЕ: “тАК, ЦЕ ВОНО! яК ВИ ЗДОГАДАЛИСЯ?”
+                    <br/>
+                    я ЗДОГАДУЮСЯ ВЖЕ 10 РОКІВ. і ДО СИХ ПІР НЕ ЗНАЮ, ЯК. 
                 </Text>
                 <Button 
                     w={'254px'}

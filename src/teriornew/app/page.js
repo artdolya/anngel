@@ -11,14 +11,14 @@ export default function Page() {
 
   return (
     <Layout >
-      <Flex className="hero" maxH="calc(100dvh - 200px)">
+      <Flex className="hero" maxH="calc(100dvh - 150px)" mt={'60px'}>
         <Flex className="hero__separator" h="65px" />
           <Flex
             className="hero__container"
             w="full"
             alignItems="center"
             justifyContent="flex-start"
-            maxH="calc(100dvh - 200px)"
+            maxH="calc(100dvh - 150px)"
           >
             <Hero />
           </Flex>
