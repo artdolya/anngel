@@ -17,7 +17,7 @@ const ContactForm = () => {
                     <Text
                         mt={4}
                         fontSize="sm"
-                        fontWeight={250}
+                        fontWeight={300}
                         lineHeight="tall"
                         textAlign={{ base: "center", md: "left" }}
                     >
@@ -25,18 +25,18 @@ const ContactForm = () => {
                     </Text>
                     <Flex flexDirection={{ base: "column", md: "row" }} justifyContent="space-between" mt={6}>
                         <Flex flexDirection="column" alignItems={{ base: "center", md: "flex-start" }}>
-                            <Text fontSize="md" fontWeight={250} textTransform="uppercase">Email us</Text>
-                            <Text fontSize="md" fontWeight={250} mt={5}>info@exsample-email.com</Text>
+                            <Text fontSize="md" fontWeight={300} textTransform="uppercase">Email us</Text>
+                            <Text fontSize="md" fontWeight={300} mt={5}>info@exsample-email.com</Text>
                         </Flex>
                         <Flex flexDirection="column" alignItems={{ base: "center", md: "flex-start" }} mt={{ base: 4, md: 0 }}>
-                            <Text fontSize="md" fontWeight={250} textTransform="uppercase">Call us</Text>
-                            <Text fontSize="md" fontWeight={250} mt={5}>
+                            <Text fontSize="md" fontWeight={300} textTransform="uppercase">Call us</Text>
+                            <Text fontSize="md" fontWeight={300} mt={5}>
                                 +1 800 403 8310 <br /> +1 954 271 2636
                             </Text>
                         </Flex>
                     </Flex>
                 </Flex>
-                <Flex flexDirection="column" maxW={{ base: "100%", md: "360px" }} flexGrow={1} ml={{ md: 8 }} mt={{ base: 6, md: 0 }}>
+                <Flex flexDirection="column" maxW={{ base: "100%", md: "360px" }} flexGrow={1} ml={{ md: 8 }} mt={{ base: 6, md: 20 }}>
                     <Text fontSize="lg" fontWeight={400} textTransform="uppercase" textAlign="left">Full name</Text>
                     <Input mb={4} variant="outline" />
                     <Flex direction={{ base: "column", md: "row" }} gap={4}>
@@ -58,7 +58,6 @@ const ContactForm = () => {
                         fontWeight={800}
                         backgroundColor="black"
                         color="white"
-                        _hover={{ bg: "gray.700" }}
                         width="full"
                     >
                         Submit

@@ -31,7 +31,12 @@ const Hero = () => {
         px={{ base: 4, md: 8 }}
         
       >
-        <Text fontSize={{ base: '24px', md: '38px', lg: '48px' }} letterSpacing={3}>Generating cozy interiors</Text>
+        <Text 
+        textTransform={'uppercase'}
+        fontWeight={900}
+        fontSize={{ base: '24px', md: '38px', lg: '48px' }} 
+        letterSpacing={3}
+        >Generating cozy interiors</Text>
       </Flex>
     </Flex>
   );
