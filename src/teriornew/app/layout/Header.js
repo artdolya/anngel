@@ -1,27 +1,36 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import SETTINGS from "../settings";
-import { Container, Flex, Text, Image, Button, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, useDisclosure } from "@chakra-ui/react";
+import { 
+  Container, Flex, Image, Button, Drawer, DrawerOverlay, 
+  DrawerContent, DrawerCloseButton, DrawerHeader, 
+  DrawerBody, DrawerFooter, useDisclosure } from "@chakra-ui/react";
 import { Link } from '@chakra-ui/next-js'
 import { IoMdMenu } from "react-icons/io";
 
 const Header = () => {
-  const {siteName } = SETTINGS;
+  const { siteName } = SETTINGS;
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
-  
+  const btnRef = useRef();
+
+  const links = [
+    { href: '/about', label: 'ABOUT' },
+    { href: '/projects', label: 'PROJECTS' },
+    { href: '/services', label: 'SERVICES' },
+    { href: '/contacts', label: 'CONTACTS' },
+    { href: '/faq', label: 'FAQ' },
+  ];
+
   return (
     <Flex as="header" position="fixed" h="80px" bg="white" w="full" zIndex={999} boxShadow='md'>
       <Container maxW="8xl">
         <Flex px={6} py={4} justifyContent='space-between'>
-          <Flex>
-            <Link href='/'>
-              <Flex h="48px">
-                  <Image src='/logo.png' htmlHeight="100%" alt={siteName}/>
-              </Flex>
-            </Link>
-          </Flex>
+          <Link href='/'>
+            <Flex h="48px">
+                <Image src='/logo.png' htmlHeight="100%" alt={siteName}/>
+            </Flex>
+          </Link>
           <Flex
             display={{ base: "none", md: "flex" }}
             w='600px'
@@ -29,21 +38,11 @@ const Header = () => {
             alignItems="center"
             letterSpacing={1}
           >
-            <Link href='/about' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-              ABOUT
-            </Link>
-            <Link href='/projects' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-              PROJECTS
-            </Link>
-            <Link href='/services' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-              SERVICES
-            </Link>
-            <Link href='/contacts' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-              CONTACTS
-            </Link>
-            <Link href='/faq' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-              FAQ
-            </Link>
+            {links.map(link => (
+              <Link key={link.href} href={link.href} fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
+                {link.label}
+              </Link>
+            ))}
           </Flex>
           <Button
             display={{ base: "none", md: "block" }} 
@@ -77,21 +76,11 @@ const Header = () => {
               <DrawerHeader>Menu</DrawerHeader>
               <DrawerBody>
                 <Flex direction="column">
-                  <Link href='/' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-                    ABOUT
-                  </Link>
-                  <Link href='/projects' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-                    PROJECTS
-                  </Link>
-                  <Link href='/services' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-                    SERVICES
-                  </Link>
-                  <Link href='/contacts' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-                    CONTACTS
-                  </Link>
-                  <Link href='/faq' fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
-                    FAQ
-                  </Link>
+                  {links.map(link => (
+                    <Link key={link.href} href={link.href} fontSize='lg' fontWeight='900' color='black' _hover={{ color: 'grey' }}>
+                      {link.label}
+                    </Link>
+                  ))}
                 </Flex>
               </DrawerBody>
               <DrawerFooter>
